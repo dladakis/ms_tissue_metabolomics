@@ -39,8 +39,8 @@ LUT_sample <- LUT_sample %>% filter(sample_number != 6)
 # boxplot(read_tsv("out/table/df_metabolites_scale_adj_top.tsv")[,-1])
 # df_metabolic2 <- read_tsv("out/table/df_metabolites_scale_adj_top_featureScale.tsv")
 # boxplot(df_metabolic2[,-1])
-# load the recommended processing from Giulia for the metabolomic. The difference in respect with my approach is the fact that she is not recommending to run the sample normalization at the beginning of the processing
-df_metabolic <- read_tsv("out/table/df_metabolites_fix_adj_top_featureScale_Giulia.tsv")
+# load the recommended processing for the metabolomics
+df_metabolic <- read_tsv("out/table/df_metabolites_fix_adj_top_featureScale.tsv")
 
 #Remove sample no 6
 df_metabolic <- df_metabolic %>% select(-id_6)
