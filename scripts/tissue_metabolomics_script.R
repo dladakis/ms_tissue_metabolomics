@@ -406,7 +406,7 @@ df_names <- df %>% left_join(final[c("id","group_2")]) %>% clean_names() %>% arr
 
 
 names_old <- read_excel("snRNAseq_for_metabolomics.xlsx", sheet = 1, range = "A1:C21") %>% clean_names()
-metabolon_names <- read_excel("tissue_metabolon.xlsx", sheet = 2, range = "N1:AR6", col_names = F)
+metabolon_names <- read_excel("ms_tissue_metabolon.xlsx", sheet = 2, range = "N1:AR6", col_names = F)
 metabolon_names <- as.data.frame(t(metabolon_names[c(1,6), ]))
 colnames(metabolon_names) <- c("nbb_number", "id")
 metabolon_names <- metabolon_names %>% mutate(id = str_replace_all(id, "\\.", "-"),
